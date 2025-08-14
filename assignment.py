@@ -5,7 +5,8 @@ from flask import Flask, render_template
 import os
 
 #importing my data
-df = pd.read_csv(r"C:\Users\hp\Downloads\Sample_Data.csv") 
+df = pd.read_csv("Sample_Data.csv")
+
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 df.rename(columns={'Values': 'Voltage'}, inplace=True)
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
