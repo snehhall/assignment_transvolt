@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voltage Analysis Dashboard</title>
+  </head>
+  <body>
+    <h1>Voltage Analysis Dashboard</h1>
+
+    <h2>Charts</h2>
+    <img src="/static/voltage_ma.png" width="800" /><br />
+    <img src="/static/peaks_lows.png" width="800" /><br />
+    <img src="/static/downward_accel.png" width="800" /><br />
+
+    <h2>Peaks</h2>
+    {{ peaks | safe }}
+
+    <h2>Lows</h2>
+    {{ lows | safe }}
+
+    <h2>Voltage < 20</h2>
+    {{ low_voltage | safe }}
+
+    <h2>Downward Acceleration Points</h2>
+    {{ downward_accel | safe }}
+  </body>
+</html>
